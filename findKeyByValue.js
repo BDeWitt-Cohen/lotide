@@ -18,6 +18,7 @@ const findKeyByValue = function(tvShows, actualShow) {
   console.log(genres);
   for (let genre of genres) {
     if (tvShows[genre] === actualShow) {
+      console.log(genre);
       return genre;
     }
 
