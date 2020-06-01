@@ -1,4 +1,4 @@
-const assertArraysEqual = require('../assertArraysEqual') //if needed without using the test folder
+// const assertArraysEqual = require('../assertArraysEqual') //if needed without using the test folder
 
 // const assertArraysEqual = function(actual, expected) {
 //   let passed = `💰💰💰 Assertion Passed: ${actual} === ${expected}`;
