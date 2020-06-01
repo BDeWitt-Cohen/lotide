@@ -1,10 +1,14 @@
-let passed = "💰💰💰 Arrays are in fact the same: [actual] === [expected]";
-let failed = "🤤🤤🤤 Arrays are not the same for this one: [actual] !== [expected]";
-
-const assertArraysEqual = function(arr1, arr2) {
+const eqArrays = require('./eqArrays');
 
 
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
+const assertArraysEqual = function(actual, expected) {
+
+
+  let passed = `💰💰💰 Assertion Passed: ${actual} === ${expected}`;
+  let failed = `🤤🤤🤤 Assertion Failed: ${actual} !== ${actual}`;
+  
+
+  if (eqArrays(actual, expected)) {
     console.log(`${passed}`);
   } else {
     console.log(`${failed}`);
@@ -14,6 +18,6 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 
-assertArraysEqual([1, 2, 3], [1, 2, 4]);
 
-module.exports = assertArraysEqual 
+
+module.exports = assertArraysEqual;

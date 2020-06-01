@@ -1,9 +1,11 @@
 //FUNCTION IMPLEMENTATION
 
-let passed = "💰💰💰 Assertion Passed: [actual] === [expected]";
-let failed = "🤤🤤🤤 Assertion Failed: [actual] !== [expected]";
+
 
 const assertEqual = function(actual, expected) {
+
+  let passed = `💰💰💰 Assertion Passed: ${actual} === ${expected}`;
+  let failed = `🤤🤤🤤 Assertion Failed: ${actual} !== ${actual}`;
   if (actual === expected) {
     console.log(`${passed}`);
   } else {
