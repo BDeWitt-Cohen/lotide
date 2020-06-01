@@ -1,27 +1,18 @@
-// const eqArrays = function(arr1, arr2) {
+const assertArraysEqual = require('../assertArraysEqual') //if needed without using the test folder
+
+// const assertArraysEqual = function(actual, expected) {
+//   let passed = `💰💰💰 Assertion Passed: ${actual} === ${expected}`;
+//   let failed = `🤤🤤🤤 Assertion Failed: ${actual} !== ${actual}`;
 
 
-//   if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
-//     return true;
+//   if (JSON.stringify(actual) === JSON.stringify(expected)) {
+//     console.log(`${passed}`);
 //   } else {
-//     return false;
+//     console.log(`${failed}`);
 //   }
+
+
 // };
-
-let passed = "💰💰💰 Arrays are in fact the same: [actual] === [expected]";
-let failed = "🤤🤤🤤 Arrays are not the same for this one: [actual] !== [expected]";
-
-const assertArraysEqual = function(arr1, arr2) {
-
-
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
-    console.log(`${passed}`);
-  } else {
-    console.log(`${failed}`);
-  }
-
-
-};
 
 const middle = function(array) {
 
@@ -42,6 +33,6 @@ const middle = function(array) {
   return newArr;
 };
 
-assertArraysEqual((middle([5, 12, 84])), [12]);
-console.log(middle([12, 84])); // => [2]
+
+module.exports = middle;
 
